@@ -29,7 +29,7 @@ pipeline{
        }
     }
     
-   /* stage ('Software Composition Analysis') {
+   /*stage ('Software Composition Analysis') {
             steps {
                 dependencyCheck additionalArguments: ''' 
                     -o "./" 
@@ -38,8 +38,8 @@ pipeline{
                     --prettyPrint''', odcInstallation: 'dependencycheck'
                 dependencyCheckPublisher pattern: 'dependency-check-report.xml'
             }
-        }
-    /*
+        }*/
+    
   stage ('Software Composition Analysis') {
       steps {
          sh 'rm -r dependency-check* || true' 
